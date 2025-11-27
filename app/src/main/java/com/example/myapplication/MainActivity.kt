@@ -26,7 +26,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -54,10 +53,8 @@ fun MealPassLoginScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-
-        // Rounded Image
         Image(
-            painter = painterResource(id = R.drawable.my_img),   // <-- your image name
+            painter = painterResource(id = R.drawable.my_img),  
             contentDescription = "Profile Image",
             modifier = Modifier
                 .size(60.dp)
@@ -67,7 +64,6 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Student Name Title
         Text(
             text = "Student Name",
             fontSize = 18.sp,
@@ -76,7 +72,6 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Student Name Input
         OutlinedTextField(
             value = studentName,
             onValueChange = { studentName = it },
@@ -89,7 +84,6 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Reg No
         Text(
             text = "Registration Number",
             fontSize = 16.sp,
@@ -110,7 +104,6 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Meal Type
         Text(
             text = "Choose Your Meal Type",
             fontSize = 16.sp,
@@ -131,7 +124,6 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Amount
         Text(
             text = "Amount",
             fontSize = 16.sp,
@@ -152,9 +144,9 @@ fun MealPassLoginScreen() {
 
         Spacer(modifier = Modifier.height(25.dp))
 
-        // Button
+        
         Button(
-            onClick = { /* Handle Click */ },
+            onClick = { // logic is here for button sir },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5)
